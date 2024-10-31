@@ -1,3 +1,4 @@
+print("")
 class Mangekant:
     def __init__(self,antallKanter:int,lengde_li:list):
         self.antallKanter = antallKanter
@@ -14,13 +15,26 @@ class Mangekant:
     def visInfo(self):
         print(f"Mangekanten har {self.antallKanter} kanter, og har omkretsen {self.o}")
 
-class Rektangen(Mangekant):
-    def __init__(self, antallKanter: int, lengde_li: list):
-        super().__init__(antallKanter, lengde_li)
+class Rektangel(Mangekant):
+    def __init__(self, lengde_li: list):
+        super().__init__(4,lengde_li)
+    
+    def angiLengder(self):
+        for i in range(2):
+            if i ==0:
+                self.a = int(input(f"skriv lengde: "))
+                self.lengde_li.append(self.a)
+                self.lengde_li.append(self.a)
+
+            if i != 0:
+                self.a = int(input(f"skriv bredde: "))
+                self.lengde_li.append(self.a)
+                self.lengde_li.append(self.a)
+
     
 liste = []
 
-a = Mangekant(5,[])
+""" a = Mangekant(5,[])
 a.angiLengder()
 liste.append(a)
 
@@ -30,7 +44,11 @@ liste.append(b)
 
 c = Mangekant(3,[])
 c.angiLengder()
-liste.append(c)
+liste.append(c) """
+
+d = Rektangel([])
+d.angiLengder()
+liste.append(d)
 
 for r in liste:
     r.omkrets()
