@@ -38,7 +38,7 @@ class Rektangel(Mangekant):
     
 liste = []
 
-""" a = Mangekant(5,[])
+a = Mangekant(5,[])
 a.angiLengder()
 liste.append(a)
 
@@ -48,7 +48,7 @@ liste.append(b)
 
 c = Mangekant(3,[])
 c.angiLengder()
-liste.append(c) """
+liste.append(c)
 
 d = Rektangel([])
 d.angiLengder()
